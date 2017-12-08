@@ -1,15 +1,15 @@
 id: XFE Test
-version: 10
+version: -1
 name: XFE Test
 description: Test XFE commands via playbook.
 starttaskid: "0"
 tasks:
   "0":
     id: "0"
-    taskid: 41dcb735-e333-4c4b-8252-a96941196a59
+    taskid: 41a4034d-13a0-46a6-8caf-26c0e8c4f211
     type: start
     task:
-      id: 41dcb735-e333-4c4b-8252-a96941196a59
+      id: 41a4034d-13a0-46a6-8caf-26c0e8c4f211
       version: -1
       name: ""
       iscommand: false
@@ -26,10 +26,10 @@ tasks:
       }
   "1":
     id: "1"
-    taskid: 4bc7bebd-5b7f-4167-8223-0022f3f73a89
+    taskid: 88b454d8-bdf6-4124-8147-cbfb50cad63c
     type: regular
     task:
-      id: 4bc7bebd-5b7f-4167-8223-0022f3f73a89
+      id: 88b454d8-bdf6-4124-8147-cbfb50cad63c
       version: -1
       name: url
       description: Check the given URL reputation
@@ -41,9 +41,10 @@ tasks:
       '#none#':
       - "2"
     scriptarguments:
-      long: ""
-      threshold: ""
-      url: biicqwfvqiec.click/images/info.php
+      long: {}
+      threshold: {}
+      url:
+        simple: biicqwfvqiec.click/images/info.php
     view: |-
       {
         "position": {
@@ -53,10 +54,10 @@ tasks:
       }
   "2":
     id: "2"
-    taskid: 3a8745c7-1711-4a79-8493-8f165b09feb5
+    taskid: 7d0228c7-cc3c-40d3-8a41-9b901488392d
     type: regular
     task:
-      id: 3a8745c7-1711-4a79-8493-8f165b09feb5
+      id: 7d0228c7-cc3c-40d3-8a41-9b901488392d
       version: -1
       name: VerifyContext
       description: |-
@@ -73,9 +74,11 @@ tasks:
       '#none#':
       - "17"
     scriptarguments:
-      expectedValue: "3"
-      fields: ""
-      path: DBotScore.Score
+      expectedValue:
+        simple: "3"
+      fields: {}
+      path:
+        simple: DBotScore.Score
     view: |-
       {
         "position": {
@@ -85,10 +88,10 @@ tasks:
       }
   "3":
     id: "3"
-    taskid: 23249eac-b6ba-462e-84a0-27e26762a409
+    taskid: 8aa9dc87-43f2-4904-88a5-74587757e8fc
     type: regular
     task:
-      id: 23249eac-b6ba-462e-84a0-27e26762a409
+      id: 8aa9dc87-43f2-4904-88a5-74587757e8fc
       version: -1
       name: DeleteContext
       description: Delete field from context
@@ -100,8 +103,9 @@ tasks:
       '#none#':
       - "1"
     scriptarguments:
-      all: "yes"
-      key: ""
+      all:
+        simple: "yes"
+      key: {}
     view: |-
       {
         "position": {
@@ -111,10 +115,10 @@ tasks:
       }
   "4":
     id: "4"
-    taskid: 5c95a71e-7546-4600-8461-c7c82fd7ab7c
+    taskid: 5cf9c15f-35ee-48e7-856b-3d89dddeda8b
     type: regular
     task:
-      id: 5c95a71e-7546-4600-8461-c7c82fd7ab7c
+      id: 5cf9c15f-35ee-48e7-856b-3d89dddeda8b
       version: -1
       name: DeleteContext
       description: Delete field from context
@@ -126,8 +130,9 @@ tasks:
       '#none#':
       - "5"
     scriptarguments:
-      all: "yes"
-      key: ""
+      all:
+        simple: "yes"
+      key: {}
     view: |-
       {
         "position": {
@@ -137,10 +142,10 @@ tasks:
       }
   "5":
     id: "5"
-    taskid: 24cee891-c1af-4bf3-80db-c13a2677d72f
+    taskid: 6e7b955f-845d-47c0-8545-ad24da8af498
     type: regular
     task:
-      id: 24cee891-c1af-4bf3-80db-c13a2677d72f
+      id: 6e7b955f-845d-47c0-8545-ad24da8af498
       version: -1
       name: ip
       description: Check the given URL reputation
@@ -152,10 +157,13 @@ tasks:
       '#none#':
       - "6"
     scriptarguments:
-      ip: 158.85.81.123
-      long: ""
-      threshold: ""
-      url: https://www.demisto.com
+      ip:
+        simple: 158.85.81.123
+      long: {}
+      threshold:
+        simple: "4"
+      url:
+        simple: https://www.demisto.com
     view: |-
       {
         "position": {
@@ -165,10 +173,10 @@ tasks:
       }
   "6":
     id: "6"
-    taskid: 2fc4eb69-5cef-4d32-8080-f89c20fab879
+    taskid: 0a8db6e7-7c10-4fcd-881f-29195f5fe09e
     type: regular
     task:
-      id: 2fc4eb69-5cef-4d32-8080-f89c20fab879
+      id: 0a8db6e7-7c10-4fcd-881f-29195f5fe09e
       version: -1
       name: VerifyContext
       description: |-
@@ -185,9 +193,11 @@ tasks:
       '#none#':
       - "18"
     scriptarguments:
-      expectedValue: XFE
-      fields: ""
-      path: IP.Malicious.Vendor
+      expectedValue:
+        simple: XFE
+      fields: {}
+      path:
+        simple: IP.Malicious.Vendor
     view: |-
       {
         "position": {
@@ -197,10 +207,10 @@ tasks:
       }
   "7":
     id: "7"
-    taskid: b5c8e01a-215c-4167-829a-f896eb52641d
+    taskid: 34ea6a2f-5744-426d-8028-bb03e55e20b9
     type: regular
     task:
-      id: b5c8e01a-215c-4167-829a-f896eb52641d
+      id: 34ea6a2f-5744-426d-8028-bb03e55e20b9
       version: -1
       name: domain
       description: Check domain reputation
@@ -213,9 +223,10 @@ tasks:
       - "8"
       - "10"
     scriptarguments:
-      domain: https://www.demisto.com
-      long: ""
-      threshold: ""
+      domain:
+        simple: https://www.demisto.com
+      long: {}
+      threshold: {}
     view: |-
       {
         "position": {
@@ -225,10 +236,10 @@ tasks:
       }
   "8":
     id: "8"
-    taskid: 854edff0-1395-4c8c-88fc-0b84e80d8899
+    taskid: 57c8e245-fbdf-4f7d-8965-ae1c2f2a5ac8
     type: regular
     task:
-      id: 854edff0-1395-4c8c-88fc-0b84e80d8899
+      id: 57c8e245-fbdf-4f7d-8965-ae1c2f2a5ac8
       version: -1
       name: VerifyContext
       description: |-
@@ -245,9 +256,11 @@ tasks:
       '#none#':
       - "12"
     scriptarguments:
-      expectedValue: "1"
-      fields: ""
-      path: DBotScore.Score
+      expectedValue:
+        simple: "1"
+      fields: {}
+      path:
+        simple: DBotScore.Score
     view: |-
       {
         "position": {
@@ -257,10 +270,10 @@ tasks:
       }
   "9":
     id: "9"
-    taskid: 7979da72-a5ac-4d63-8343-76fc3af37aaa
+    taskid: 29c641f2-47f7-48d4-830e-74d302e06ac1
     type: regular
     task:
-      id: 7979da72-a5ac-4d63-8343-76fc3af37aaa
+      id: 29c641f2-47f7-48d4-830e-74d302e06ac1
       version: -1
       name: DeleteContext
       description: Delete field from context
@@ -272,8 +285,9 @@ tasks:
       '#none#':
       - "7"
     scriptarguments:
-      all: "yes"
-      key: ""
+      all:
+        simple: "yes"
+      key: {}
     view: |-
       {
         "position": {
@@ -283,10 +297,10 @@ tasks:
       }
   "10":
     id: "10"
-    taskid: 247bc241-8aa2-4b96-8349-af3e03af5a1d
+    taskid: 0ac72df1-e5ae-4320-8cbf-6cefddee413d
     type: condition
     task:
-      id: 247bc241-8aa2-4b96-8349-af3e03af5a1d
+      id: 0ac72df1-e5ae-4320-8cbf-6cefddee413d
       version: -1
       name: Check No Malicious found
       scriptName: Exists
@@ -297,7 +311,8 @@ tasks:
       "no":
       - "12"
     scriptarguments:
-      value: ${URL.Malicious}
+      value:
+        simple: ${URL.Malicious}
     view: |-
       {
         "position": {
@@ -307,10 +322,10 @@ tasks:
       }
   "12":
     id: "12"
-    taskid: f5eda1de-ba9e-48f2-8641-986880914246
+    taskid: d8aeb186-b189-4c29-854f-008b3aad2cc7
     type: regular
     task:
-      id: f5eda1de-ba9e-48f2-8641-986880914246
+      id: d8aeb186-b189-4c29-854f-008b3aad2cc7
       version: -1
       name: DeleteContext
       description: Delete field from context
@@ -322,8 +337,9 @@ tasks:
       '#none#':
       - "13"
     scriptarguments:
-      all: "yes"
-      key: ""
+      all:
+        simple: "yes"
+      key: {}
     view: |-
       {
         "position": {
@@ -333,10 +349,10 @@ tasks:
       }
   "13":
     id: "13"
-    taskid: f38f08ff-7c9c-48b0-87ff-c7e4b12984e1
+    taskid: d1bec577-9b5e-44d2-849e-429e708f12fe
     type: regular
     task:
-      id: f38f08ff-7c9c-48b0-87ff-c7e4b12984e1
+      id: d1bec577-9b5e-44d2-849e-429e708f12fe
       version: -1
       name: cve-latest
       description: Return the latest vulnerabilities found
@@ -348,7 +364,8 @@ tasks:
       '#none#':
       - "16"
     scriptarguments:
-      limit: "1"
+      limit:
+        simple: "1"
     view: |-
       {
         "position": {
@@ -358,10 +375,10 @@ tasks:
       }
   "14":
     id: "14"
-    taskid: b3d6aa4d-3575-4090-8c65-dbf3abb5b77e
+    taskid: 4a3dc127-2b8d-4b1d-88e1-646b2aaf8ecf
     type: regular
     task:
-      id: b3d6aa4d-3575-4090-8c65-dbf3abb5b77e
+      id: 4a3dc127-2b8d-4b1d-88e1-646b2aaf8ecf
       version: -1
       name: cve-search
       description: Search for details about the given CVE
@@ -370,7 +387,8 @@ tasks:
       iscommand: true
       brand: XFE
     scriptarguments:
-      cveId: ${CVE.ID}
+      cveId:
+        simple: ${CVE.ID}
     view: |-
       {
         "position": {
@@ -380,10 +398,10 @@ tasks:
       }
   "16":
     id: "16"
-    taskid: 6ef50ed3-0c52-4d38-8945-c1b2e6386c59
+    taskid: ad3059da-b475-4519-824f-813ef680e24d
     type: condition
     task:
-      id: 6ef50ed3-0c52-4d38-8945-c1b2e6386c59
+      id: ad3059da-b475-4519-824f-813ef680e24d
       version: -1
       name: VerifyContext
       description: |-
@@ -400,12 +418,16 @@ tasks:
       "yes":
       - "14"
     scriptarguments:
-      array: ${ArraySize}
-      contextKey: ""
-      expectedValue: "3"
-      fields: ""
-      path: CVE
-      value: ${CVE}
+      array:
+        simple: ${ArraySize}
+      contextKey: {}
+      expectedValue:
+        simple: "3"
+      fields: {}
+      path:
+        simple: CVE
+      value:
+        simple: ${CVE}
     view: |-
       {
         "position": {
@@ -415,10 +437,10 @@ tasks:
       }
   "17":
     id: "17"
-    taskid: 8e8f9460-029b-4b59-8324-e974e22bd9ea
+    taskid: 3b160b55-51eb-4d33-8deb-e0dd900573e8
     type: regular
     task:
-      id: 8e8f9460-029b-4b59-8324-e974e22bd9ea
+      id: 3b160b55-51eb-4d33-8deb-e0dd900573e8
       version: -1
       name: VerifyContext
       description: |-
@@ -435,9 +457,11 @@ tasks:
       '#none#':
       - "4"
     scriptarguments:
-      expectedValue: XFE
-      fields: ""
-      path: URL.Malicious.Vendor
+      expectedValue:
+        simple: XFE
+      fields: {}
+      path:
+        simple: URL.Malicious.Vendor
     view: |-
       {
         "position": {
@@ -447,10 +471,10 @@ tasks:
       }
   "18":
     id: "18"
-    taskid: fa7b29c7-43e3-4fda-8961-68e507f57db4
+    taskid: 8692b28a-d1e0-4d20-8c87-12d1fd6571fe
     type: regular
     task:
-      id: fa7b29c7-43e3-4fda-8961-68e507f57db4
+      id: 8692b28a-d1e0-4d20-8c87-12d1fd6571fe
       version: -1
       name: DeleteContext
       scriptName: DeleteContext
@@ -461,8 +485,9 @@ tasks:
       '#none#':
       - "19"
     scriptarguments:
-      all: "yes"
-      key: ""
+      all:
+        simple: "yes"
+      key: {}
     view: |-
       {
         "position": {
@@ -472,10 +497,10 @@ tasks:
       }
   "19":
     id: "19"
-    taskid: aee475f6-88d4-4f3f-87a8-01111f811b7d
+    taskid: 7d06af49-67a0-4bd0-821a-36dce58b605e
     type: regular
     task:
-      id: aee475f6-88d4-4f3f-87a8-01111f811b7d
+      id: 7d06af49-67a0-4bd0-821a-36dce58b605e
       version: -1
       name: file
       description: Check file reputation
@@ -489,8 +514,9 @@ tasks:
       - "21"
       - "22"
     scriptarguments:
-      file: 37c919f28798a886ec7202cc39818b8ce641ae83
-      long: ""
+      file:
+        simple: 37c919f28798a886ec7202cc39818b8ce641ae83
+      long: {}
     view: |-
       {
         "position": {
@@ -500,10 +526,10 @@ tasks:
       }
   "20":
     id: "20"
-    taskid: 6cc82bad-c0fd-4fc7-85a1-34bfe46e512b
+    taskid: 2824f63c-893b-4969-8837-d3e687a6d22b
     type: regular
     task:
-      id: 6cc82bad-c0fd-4fc7-85a1-34bfe46e512b
+      id: 2824f63c-893b-4969-8837-d3e687a6d22b
       version: -1
       name: VerifyContext
       description: |-
@@ -520,9 +546,11 @@ tasks:
       '#none#':
       - "9"
     scriptarguments:
-      expectedValue: XFE
-      fields: ""
-      path: File.Malicious.Vendor
+      expectedValue:
+        simple: XFE
+      fields: {}
+      path:
+        simple: File.Malicious.Vendor
     view: |-
       {
         "position": {
@@ -532,10 +560,10 @@ tasks:
       }
   "21":
     id: "21"
-    taskid: c054ce1f-5f3d-41b2-89d1-664c62e25010
+    taskid: 4700f732-d68c-48de-851d-3f126160fbb4
     type: regular
     task:
-      id: c054ce1f-5f3d-41b2-89d1-664c62e25010
+      id: 4700f732-d68c-48de-851d-3f126160fbb4
       version: -1
       name: VerifyContext
       description: |-
@@ -552,9 +580,11 @@ tasks:
       '#none#':
       - "9"
     scriptarguments:
-      expectedValue: "3"
-      fields: ""
-      path: DBotScore.Score
+      expectedValue:
+        simple: "3"
+      fields: {}
+      path:
+        simple: DBotScore.Score
     view: |-
       {
         "position": {
@@ -564,10 +594,10 @@ tasks:
       }
   "22":
     id: "22"
-    taskid: 9a69412a-ce62-45f6-84f3-e8762801da47
+    taskid: 56ac17b0-a2aa-40b9-82c7-c1169c0e543d
     type: regular
     task:
-      id: 9a69412a-ce62-45f6-84f3-e8762801da47
+      id: 56ac17b0-a2aa-40b9-82c7-c1169c0e543d
       version: -1
       name: VerifyContext
       description: |-
@@ -584,9 +614,11 @@ tasks:
       '#none#':
       - "9"
     scriptarguments:
-      expectedValue: 37c919f28798a886ec7202cc39818b8ce641ae83
-      fields: ""
-      path: File.SHA1
+      expectedValue:
+        simple: 37c919f28798a886ec7202cc39818b8ce641ae83
+      fields: {}
+      path:
+        simple: File.SHA1
     view: |-
       {
         "position": {
